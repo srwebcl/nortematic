@@ -1298,3 +1298,43 @@ img { max-width: 100%; display: block; }
     margin: 0 6px;
   }
 }
+/* =======================================
+   AJUSTES UX (Footer Móvil y Espaciado)
+   ======================================= */
+
+/* 1. Corrige espacio excesivo antes de Ubicación (Web y Móvil) */
+.ubicacion {
+  /* Reduce el padding-top de 70px (que venía de .section) a 20px */
+  padding-top: 20px; 
+}
+
+
+/* 2. Centra el logo del FOOTER en móvil */
+@media (max-width: 768px) {
+  
+  /* El CSS ya tiene una regla que centra el texto del footer-grid.
+    Usaremos esa misma lógica para el logo.
+  */
+
+  .footer-brand .footer-logo {
+    /* Centra la imagen (que es 'display: block') usando márgenes automáticos */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* 3. (OPCIONAL) Centra el texto de Ubicación en móvil */
+/* Vi que esto lo solucionaste en el header, pero por si acaso, 
+   para centrar el texto de la sección Ubicación en móvil: */
+@media (max-width: 960px) {
+  .ubicacion-text {
+    text-align: center;
+  }
+
+  .ubicacion-text .btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
